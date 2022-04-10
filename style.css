@@ -10,8 +10,10 @@ body {
     background: #1C1C1C;
 }
 .root {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
 .container {
     max-width: 550px;

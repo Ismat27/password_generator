@@ -2,7 +2,9 @@
 
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let num = '0123456789'
-const characters = [...alphabet.toUpperCase().split(''), ...alphabet.split(''), ...num.slice('')]
+const characters = [...alphabet.toUpperCase().split(''), ...alphabet.split(''), ...num.split('')]
+console.log(shuffleArray(characters));
+
 const btn = document.querySelector('.btn')
 const pass1 = document.getElementById('pass1')
 const pass2 = document.getElementById('pass2')
