@@ -1,9 +1,9 @@
 // console.log("well connected")
 
-let alphabet = 'abcdefghijklmnopqrstuvwxyz';
-let num = '0123456789'
-const characters = [...alphabet.toUpperCase().split(''), ...alphabet.split(''), ...num.split('')]
-console.log(shuffleArray(characters));
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+const num = '0123456789';
+const symbols = `!£$%^&*@~#?=-/\\~()`;
+const characters = [...alphabet.toUpperCase().split(''), ...alphabet.split(''), ...num.split(''), ...symbols.split('')]
 
 const btn = document.querySelector('.btn')
 const pass1 = document.getElementById('pass1')
@@ -28,18 +28,18 @@ function shuffleArray(array) {
     return array;
   }
 
-// function to randomly generate 16 characters from an array
+// function to randomly generate 16 or any number of characters from an array
 // steps:
 // declare an empty string to represent the password 
 // loop through the array 16 times each time generating a random number whose max value will be 1 less than the length of the array
 // pick the element from the array whose index is equal to the random number 
 // append the element to the emptry string declared initally
 
-function generatePassword(array, passwordLength=16) {
+function generatePassword(array, passwordLength=4) {
     let password = ""
-    for (let i=1; i<passwordLength; i++) {
-        let ranNum = Math.floor(Math.random() * array.length)
-        let ele = array[ranNum]
+    for (let i=0; i<passwordLength; i++) {
+        const ranNum = Math.floor(Math.random() * array.length)
+        const ele = array[ranNum]
         password += ele
     }
     return password

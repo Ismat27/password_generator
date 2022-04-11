@@ -85,8 +85,8 @@ button>span {
 .passwords {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    row-gap: 10px;
     padding-top: 30px;
 }
 
