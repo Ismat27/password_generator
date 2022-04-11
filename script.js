@@ -35,7 +35,7 @@ function shuffleArray(array) {
 // pick the element from the array whose index is equal to the random number 
 // append the element to the emptry string declared initally
 
-function generatePassword(array, passwordLength=4) {
+function generatePassword(array, passwordLength=16) {
     let password = ""
     for (let i=0; i<passwordLength; i++) {
         const ranNum = Math.floor(Math.random() * array.length)
